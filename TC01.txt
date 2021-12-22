@@ -1,0 +1,16 @@
+public class By_id_path {
+	public static void main(String[] args ) {
+		System.setProperty("webdriver.chrome.driver",PathConfig.driverpath);
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get(PathConfig.appUrl);   //https://www.facebook.com
+		
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.id("email")).sendKeys("@1232 email");
+		driver.findElement(By.id("pass")).sendKeys("123456");
+	driver.findElement(By.name("login")).click();
+	}
+
+}
